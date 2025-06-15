@@ -2,10 +2,10 @@ package com.example.gas.data.mapper
 
 import com.example.gas.data.source.local.entity.RoomEmergency
 import com.example.gas.data.source.network.model.FirebaseEmergency
-import com.example.gas.domain.model.Emergency
+import com.example.gas.domain.model.EmergencyInfo
 
 // External to Local
-fun Emergency.toLocal() = RoomEmergency(
+fun EmergencyInfo.toLocal() = RoomEmergency(
     emergencyId = emergencyId,
     userId = userId,
     emergencyName = emergencyName,
@@ -13,10 +13,10 @@ fun Emergency.toLocal() = RoomEmergency(
     priority = priority
 )
 
-fun List<Emergency>.toLocal() = map(Emergency::toLocal)
+fun List<EmergencyInfo>.toLocal() = map(EmergencyInfo::toLocal)
 
 // Local to External
-fun RoomEmergency.toExternal() = Emergency(
+fun RoomEmergency.toExternal() = EmergencyInfo(
     emergencyId = emergencyId,
     userId = userId,
     emergencyName = emergencyName,
@@ -51,10 +51,10 @@ fun RoomEmergency.toNetwork() = FirebaseEmergency(
 fun List<RoomEmergency>.toNetwork() = map(RoomEmergency::toNetwork)
 
 // External to Network
-fun Emergency.toNetwork() = toLocal().toNetwork()
+fun EmergencyInfo.toNetwork() = toLocal().toNetwork()
 
 @JvmName("externalToNetwork")
-fun List<Emergency>.toNetwork() = map(Emergency::toNetwork)
+fun List<EmergencyInfo>.toNetwork() = map(EmergencyInfo::toNetwork)
 
 // Network to External
 fun FirebaseEmergency.toExternal() = toLocal().toExternal()

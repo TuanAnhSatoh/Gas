@@ -18,7 +18,7 @@ abstract class RepositoryModule {
 
     @Singleton
     @Binds
-    abstract fun bindEmergencyInfoRepository(repository: DefaultEmergencyRepository): EmergencyRepository
+    abstract fun bindEmergencyInfoRepository(repository: DefaultEmergencyInfoRepository): EmergencyInfoRepository
 
     @Singleton
     @Binds

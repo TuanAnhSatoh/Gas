@@ -11,7 +11,7 @@ interface RepositoryEntryPoint {
 
     fun alertRepository(): AlertRepository
 
-    fun emergencyRepository(): EmergencyRepository
+    fun emergencyRepository(): EmergencyInfoRepository
 
     fun userRepository(): UserRepository
 }

@@ -4,13 +4,13 @@ import android.content.Context
 import android.content.Intent
 import com.example.gas.domain.model.Measurement
 import com.example.gas.domain.repository.AlertRepository
-import com.example.gas.domain.repository.EmergencyRepository
+import com.example.gas.domain.repository.EmergencyInfoRepository
 import com.example.gas.presentation.receiver.CallAlertReceiver
 import timber.log.Timber
 import javax.inject.Inject
 
 class MeasurementAlertUseCase @Inject constructor(
-    private val emergencyRepository: EmergencyRepository,
+    private val emergencyRepository: EmergencyInfoRepository,
     private val alertRepository: AlertRepository,
     private val gasAnalysisUseCase: GasAnalysisUseCase,
 ) {
@@ -19,7 +19,7 @@ class MeasurementAlertUseCase @Inject constructor(
             .d("Checking thresholds for measurement: ${measurement.measurementId}")
 
         if (gasAnalysisUseCase.isAbnormal(measurement.gas)) {
-            val emergencyInfos = emergencyRepository.getEmergencies()
+            val emergencyInfos = emergencyRepository.getEmergencyInfos()
                 .sortedBy { it.priority }
 
             val topPriorityEmergency = emergencyInfos.firstOrNull() ?: return
