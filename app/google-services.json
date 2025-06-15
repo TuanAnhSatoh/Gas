@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "294373626438",
+    "firebase_url": "https://gasmonitor-e027f-default-rtdb.firebaseio.com",
+    "project_id": "gasmonitor-e027f",
+    "storage_bucket": "gasmonitor-e027f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294373626438:android:a26015564cbaf4adabf047",
+        "android_client_info": {
+          "package_name": "com.example.gas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0M2mjVeZE0cY5aZ_-QdpPmNkpiAw0MkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
