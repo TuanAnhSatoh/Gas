@@ -63,16 +63,16 @@
     <!-- Heart Icon -->
     <ImageView
         android:id="@+id/iv_heart_icon"
-        android:layout_width="0dp"
-        android:layout_height="140dp"
+        android:layout_width="143dp"
+        android:layout_height="122dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/heart_rate_icon"
         android:src="@drawable/ic_gas"
-        app:layout_constraintTop_toTopOf="@id/tv_heart_rate_value"
         app:layout_constraintBottom_toBottomOf="@id/tv_heart_rate_value"
-        app:layout_constraintStart_toEndOf="@id/tv_heart_rate_value"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_heart_rate_value"
+        app:layout_constraintTop_toTopOf="@id/tv_heart_rate_value"
         app:tint="@color/heart_icon_color" />
 
     <!-- Min Icon + Value -->
