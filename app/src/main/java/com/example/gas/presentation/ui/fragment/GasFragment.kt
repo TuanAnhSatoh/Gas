@@ -31,7 +31,6 @@ class GasFragment : Fragment() {
     private lateinit var tabLayout: TabLayout
     private lateinit var lineChart: LineChart
     private lateinit var tvTitle: TextView
-    private lateinit var tvDate: TextView
     private lateinit var tvHeartRateValue: TextView
     private lateinit var tvBpmLabel: TextView
     private lateinit var tvMinValue: TextView
@@ -137,7 +136,7 @@ class GasFragment : Fragment() {
             axisLeft.apply {
                 setDrawGridLines(true)
                 axisMinimum = 0f
-                axisMaximum = 150f
+                axisMaximum = 1000f
             }
             axisRight.isEnabled = false
             setBackgroundColor(Color.TRANSPARENT)
@@ -179,7 +178,7 @@ class GasFragment : Fragment() {
         tvHeartRateValue.text = "$latestBpm"
         tvMinValue.text = "${minValue.toInt()}"
         tvMaxValue.text = "${maxValue.toInt()}"
-        tvAverageLabel.text = "Average ${averageValue.toInt()} BPM"
+        tvAverageLabel.text = "Average ${averageValue.toInt()} PPMM"
 
         val maxAlertThreshold = 120f
         val minAlertThreshold = 55f
