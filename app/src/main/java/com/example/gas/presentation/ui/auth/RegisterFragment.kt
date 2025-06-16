@@ -98,14 +98,6 @@ class RegisterFragment : Fragment() {
         }
 
         // Blood type spinner
-        binding.spinnerBloodType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-                viewModel.setBloodType(parent.getItemAtPosition(position).toString())
-            }
-            override fun onNothingSelected(parent: AdapterView<*>) {
-                viewModel.setBloodType("")
-            }
-        }
 
         // Observe registration success notification
         viewModel.registrationSuccess.observe(viewLifecycleOwner) { message ->

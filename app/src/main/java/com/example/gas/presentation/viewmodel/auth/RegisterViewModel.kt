@@ -49,9 +49,6 @@ class RegisterViewModel @Inject constructor(
     private val _gender = MutableLiveData<String>()
     val gender: LiveData<String> = _gender
 
-    private val _bloodType = MutableLiveData<String>()
-    val bloodType: LiveData<String> = _bloodType
-
     private val _phone = MutableLiveData<String>()
     val phone: LiveData<String> = _phone
 
@@ -76,8 +73,6 @@ class RegisterViewModel @Inject constructor(
     private val _genderError = MutableLiveData<String?>()
     val genderError: LiveData<String?> = _genderError
 
-    private val _bloodTypeError = MutableLiveData<String?>()
-    val bloodTypeError: LiveData<String?> = _bloodTypeError
 
     private val _phoneError = MutableLiveData<String?>()
     val phoneError: LiveData<String?> = _phoneError
@@ -163,12 +158,7 @@ class RegisterViewModel @Inject constructor(
         _gender.value = value
     }
 
-    /**
-     * Sets the blood type from spinner.
-     */
-    fun setBloodType(value: String) {
-        _bloodType.value = value
-    }
+
 
     /**
      * Validates input fields and initiates registration.
@@ -180,7 +170,6 @@ class RegisterViewModel @Inject constructor(
         val confirmPasswordValue = confirmPassword.value ?: ""
         val dateOfBirthValue = dateOfBirth.value ?: ""
         val genderValue = gender.value ?: ""
-        val bloodTypeValue = bloodType.value ?: ""
         val phoneValue = phone.value ?: ""
         val addressValue = address.value
 
@@ -190,7 +179,6 @@ class RegisterViewModel @Inject constructor(
         _confirmPasswordError.value = null
         _dateOfBirthError.value = null
         _genderError.value = null
-        _bloodTypeError.value = null
         _phoneError.value = null
         _addressError.value = null
 
@@ -233,10 +221,6 @@ class RegisterViewModel @Inject constructor(
             _genderError.value = "Gender is required"
             isValid = false
         }
-        if (bloodTypeValue.isBlank()) {
-            _bloodTypeError.value = "Blood type is required"
-            isValid = false
-        }
         if (phoneValue.isBlank()) {
             _phoneError.value = "Phone is required"
             isValid = false
@@ -253,7 +237,6 @@ class RegisterViewModel @Inject constructor(
                 address = addressValue,
                 dateOfBirth = dateOfBirthValue,
                 gender = genderValue,
-                bloodType = bloodTypeValue,
                 phone = phoneValue
             )
         }
@@ -269,7 +252,6 @@ class RegisterViewModel @Inject constructor(
         address: String?,
         dateOfBirth: String,
         gender: String,
-        bloodType: String,
         phone: String
     ) {
         _error.value = null
@@ -290,7 +272,6 @@ class RegisterViewModel @Inject constructor(
                     address = address,
                     dateOfBirth = formattedDate,
                     gender = gender,
-                    bloodType = bloodType,
                     phone = phone
                 )
                 // Send email link instead of verification code

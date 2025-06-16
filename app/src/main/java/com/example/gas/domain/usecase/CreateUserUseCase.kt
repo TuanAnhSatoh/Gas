@@ -15,7 +15,6 @@ class CreateUserUseCase @Inject constructor(
         address: String?,
         dateOfBirth: String,
         gender: String,
-        bloodType: String,
         phone: String
     ): String {
         Timber.Forest.d("Creating user with email: $email")

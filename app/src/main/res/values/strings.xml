@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Health Care</string>
+    <string name="app_name">Gas Alert</string>
     <string name="senior_care_alert">Senior Care Alert</string>
     <string name="explore">Explore</string>
     <string name="medicine">Medicine</string>

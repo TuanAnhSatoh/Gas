@@ -166,39 +166,6 @@
                 app:layout_constraintStart_toStartOf="@id/spinner_gender"
                 app:layout_constraintTop_toBottomOf="@id/spinner_gender" />
 
-            <!-- Blood Type -->
-            <TextView
-                android:id="@+id/tv_blood_type_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Blood Type:"
-                android:textColor="?android:textColorPrimary"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_gender_error" />
-
-            <Spinner
-                android:id="@+id/spinner_blood_type"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
-                android:entries="@array/blood_type_options"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_blood_type_label" />
-
-            <TextView
-                android:id="@+id/tv_blood_type_error"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@{viewModel.bloodTypeError}"
-                android:textColor="@android:color/holo_red_light"
-                android:visibility="@{viewModel.bloodTypeError != null ? View.VISIBLE : View.GONE}"
-                app:layout_constraintStart_toStartOf="@id/spinner_blood_type"
-                app:layout_constraintTop_toBottomOf="@id/spinner_blood_type" />
-
             <!-- Address -->
             <TextView
                 android:id="@+id/tv_address_label"
@@ -209,7 +176,7 @@
                 android:textColor="?android:textColorPrimary"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_blood_type_error" />
+                app:layout_constraintTop_toBottomOf="@id/tv_gender_error" />
 
             <EditText
                 android:id="@+id/et_address"
