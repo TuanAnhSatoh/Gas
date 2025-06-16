@@ -5,6 +5,7 @@ import android.content.Intent
 import com.example.gas.domain.model.Measurement
 import com.example.gas.domain.repository.AlertRepository
 import com.example.gas.domain.repository.EmergencyInfoRepository
+import com.example.gas.presentation.util.NotificationUtil
 import com.example.gas.presentation.receiver.CallAlertReceiver
 import timber.log.Timber
 import javax.inject.Inject
@@ -27,7 +28,7 @@ class MeasurementAlertUseCase @Inject constructor(
             alertRepository.createAlert(
                 measurementId = measurement.measurementId,
                 emergencyId = topPriorityEmergency.emergencyId,
-                triggerReason = "Abnormal health indicators",
+                triggerReason = "Abnormal Gas indicators",
                 contacted = false
             )
 
@@ -36,6 +37,11 @@ class MeasurementAlertUseCase @Inject constructor(
                     .d("Alert throttled - skipping alert for measurement: ${measurement.measurementId}")
                 return
             }
+
+            val message = "Abnormal gas indicators detected! " +
+                    "Call ${topPriorityEmergency.emergencyName} at ${topPriorityEmergency.emergencyPhone}"
+
+            NotificationUtil.showWarningNotification(context, "Measurement Alert", message)
 
             val intent = Intent(context, CallAlertReceiver::class.java).apply {
                 action = "ACTION_CALL_ALERT"
