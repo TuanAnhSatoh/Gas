@@ -47,7 +47,7 @@
     <string name="google_logo">Google logo</string>
     <string name="dashboard">DASHBOARD</string>
     <string name="good_morning">Good Morning</string>
-    <string name="heart_rate">HEART RATE</string>
+    <string name="heart_rate">GAS Monitor</string>
     <string name="oxygen_level">OXYGEN</string>
     <string name="ecg">ECG</string>
     <string name="weight">WEIGHT</string>
