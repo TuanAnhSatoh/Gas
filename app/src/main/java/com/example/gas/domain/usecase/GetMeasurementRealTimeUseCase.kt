@@ -1,6 +1,5 @@
 package com.example.gas.domain.usecase
 
-
 import com.example.gas.domain.repository.MeasurementRepository
 import javax.inject.Inject
 
