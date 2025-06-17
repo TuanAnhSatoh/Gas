@@ -178,7 +178,7 @@ class GasFragment : Fragment() {
         tvHeartRateValue.text = "$latestBpm"
         tvMinValue.text = "${minValue.toInt()}"
         tvMaxValue.text = "${maxValue.toInt()}"
-        tvAverageLabel.text = "Average ${averageValue.toInt()} PPMM"
+        tvAverageLabel.text = "Average ${averageValue.toInt()} PPM"
 
         val maxAlertThreshold = 120f
         val minAlertThreshold = 55f
@@ -207,7 +207,7 @@ class GasFragment : Fragment() {
 
         val chartValueColor = if (isAlert) R.color.alert_text_color else R.color.chart_value_text_normal
 
-        val dataSet = LineDataSet(entries, "Heart Rate (BPM)").apply {
+        val dataSet = LineDataSet(entries, "Gas (PPM)").apply {
             mode = LineDataSet.Mode.CUBIC_BEZIER
             cubicIntensity = 0.2f
             color = resources.getColor(R.color.chart_line_color, null)
