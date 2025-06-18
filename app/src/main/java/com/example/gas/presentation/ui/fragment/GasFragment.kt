@@ -220,10 +220,10 @@ class GasFragment : Fragment() {
             color = resources.getColor(R.color.chart_line_color, null)
             setDrawCircles(false)
 //            setCircleColor(Color.BLACK)
-            lineWidth = 2.5f
+            lineWidth = 3.0f // line width
             circleRadius = 5f
             setDrawCircleHole(false)
-            setDrawValues(true)
+            setDrawValues(false) // erase value in graph
             valueTextColor = resources.getColor(chartValueColor, null)
             valueTextSize = 10f
             setDrawFilled(true)
@@ -236,9 +236,6 @@ class GasFragment : Fragment() {
 
         lineChart.axisLeft.axisMinimum = (displayData.minOrNull() ?: 0f) - 10f
         lineChart.axisLeft.axisMaximum = (displayData.maxOrNull() ?: 100f) + 10f
-
-        lineChart.xAxis.axisMinimum = 0f
-        lineChart.xAxis.axisMaximum = 19f
 
     }
 }
