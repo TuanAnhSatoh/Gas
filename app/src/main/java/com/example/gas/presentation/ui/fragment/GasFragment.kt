@@ -141,6 +141,17 @@ class GasFragment : Fragment() {
 
     @SuppressLint("SetTextI18n")
     private fun updateChartData() {
+        val displayData = if (heartRateData.size > 20) {
+            heartRateData.takeLast(20)
+        } else {
+            heartRateData
+        }
+        val displayTimestamps = if (timeStamps.size > 20) {
+            timeStamps.takeLast(20)
+        } else {
+            timeStamps
+        }
+
         val entries = heartRateData.mapIndexed { index, value ->
             Entry(index.toFloat(), value)
         }
@@ -222,5 +233,9 @@ class GasFragment : Fragment() {
         lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(labels)
         lineChart.data = LineData(dataSet)
         lineChart.invalidate()
+
+        lineChart.axisLeft.axisMinimum = (displayData.minOrNull() ?: 0f) - 10f
+        lineChart.axisLeft.axisMaximum = (displayData.maxOrNull() ?: 100f) + 10f
+
     }
 }
