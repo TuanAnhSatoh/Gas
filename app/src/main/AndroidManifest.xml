@@ -62,6 +62,14 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".presentation.ui.activity.AlertActivity"
+            android:launchMode="singleTop"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:exported="true"
+            android:theme="@style/Theme.Transparent" />
+
         <!-- Services -->
         <service
             android:name=".presentation.service.MeasurementMonitorService"

@@ -4,6 +4,6 @@ import javax.inject.Inject
 
 class GasAnalysisUseCase @Inject constructor() {
     fun isAbnormal(gas: Float): Boolean {
-        return gas > 400
+        return gas > 20
     }
 }
