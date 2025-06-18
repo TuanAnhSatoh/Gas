@@ -237,5 +237,8 @@ class GasFragment : Fragment() {
         lineChart.axisLeft.axisMinimum = (displayData.minOrNull() ?: 0f) - 10f
         lineChart.axisLeft.axisMaximum = (displayData.maxOrNull() ?: 100f) + 10f
 
+        lineChart.xAxis.axisMinimum = 0f
+        lineChart.xAxis.axisMaximum = 19f
+
     }
 }
