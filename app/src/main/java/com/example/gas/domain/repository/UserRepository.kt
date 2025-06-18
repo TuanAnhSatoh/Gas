@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 /**
  * Interface to the data layer for users.
  */
-interfaceUserRepository {
+interface UserRepository {
 
     suspend fun createUser(
         userId: String,

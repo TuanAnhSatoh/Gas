@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.gas.presentation.ui.fragment.InformationFragment"
-        android:label="Gas Fragment">
+        android:label="Account Fragment">
     </fragment>
 
 </navigation>

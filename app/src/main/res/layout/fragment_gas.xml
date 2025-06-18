@@ -8,27 +8,19 @@
     android:padding="16dp"
     android:background="@color/background">
 
-    <!-- Back Arrow -->
-    <ImageView
-        android:id="@+id/ic_back_heart_rate_to_home"
-        android:layout_width="34dp"
-        android:layout_height="32dp"
-        android:contentDescription="@string/back"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <!-- Title -->
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:text="@string/heart_rate"
         android:textColor="@color/primary_text_color"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/ic_back_heart_rate_to_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Date -->

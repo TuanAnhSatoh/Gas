@@ -42,7 +42,6 @@ class EmergencyFragment : Fragment() {
         setupRecyclerView()
         setupFab()
         observeContacts()
-        setupBackButton()
     }
 
     private fun setupRecyclerView() {
@@ -69,12 +68,6 @@ class EmergencyFragment : Fragment() {
         binding.fabAddContact.setOnClickListener {
             viewModel.resetDialogInputs()
             showAddEditDialog()
-        }
-    }
-
-    private fun setupBackButton() {
-        binding.icBackEmergencyToSettings.setOnClickListener {
-            requireActivity().onBackPressedDispatcher.onBackPressed()
         }
     }
 

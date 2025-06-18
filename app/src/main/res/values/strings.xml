@@ -47,7 +47,7 @@
     <string name="google_logo">Google logo</string>
     <string name="dashboard">DASHBOARD</string>
     <string name="good_morning">Good Morning</string>
-    <string name="heart_rate">GAS Monitor</string>
+    <string name="heart_rate">GAS MONITOR</string>
     <string name="oxygen_level">OXYGEN</string>
     <string name="ecg">ECG</string>
     <string name="weight">WEIGHT</string>
@@ -154,7 +154,7 @@
     <string name="error_network">Network error. Please check your connection.</string>
     <string name="error_unexpected">An unexpected error occurred. Please try again.</string>
     <string name="error_saving_state">Error saving login state</string>
-    <string name="emergency_contacts">Emergency Contact</string>
+    <string name="emergency_contacts">EMERGENCY CONTACTS</string>
     <string name="add_contact">Add Contact</string>
     <string name="no_emergency_contacts">No Emergency Contact</string>
     <string name="edit_contact_description">Edit emergency contact</string>

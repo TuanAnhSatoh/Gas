@@ -62,10 +62,6 @@ class GasFragment : Fragment() {
         tvAverageLabel = view.findViewById(R.id.tv_average_label)
         ivHeartIcon = view.findViewById(R.id.iv_heart_icon)
 
-        view.findViewById<ImageView>(R.id.ic_back_heart_rate_to_home).setOnClickListener {
-            findNavController().popBackStack()
-        }
-
         setupTabLayout()
         setupLineChart()
 
